@@ -9,7 +9,7 @@ program
   .version('1.0.0')
   .argument('<filepath1>')
   .argument('<filepath2>')
-  .action((file1, file2) => genDiff(file1, file2))
+  .action((file1, file2) => console.log(genDiff(file1, file2)))
   .option('-f, --format <type>',  'output format');
 
  function start(){

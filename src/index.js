@@ -1,14 +1,18 @@
+const path = require('path')
 const _ = require('lodash');
 const  fs = require( 'node:fs');
-
+const parse = require('./parsFile')
 
 function gendiff(pathFile1,pathFile2){
 
 const newPathFile1 = fs.readFileSync(pathFile1)
 const newPathFile2 = fs.readFileSync(pathFile2)
 
-const file1 = JSON.parse(newPathFile1)
-const file2 = JSON.parse(newPathFile2)
+const typeFile1 = path.extname(pathFile1).substring(1);
+const typeFile2 = path.extname(pathFile2).substring(1);
+
+const file1 = parse(newPathFile1,typeFile1)
+const file2 = parse(newPathFile2,typeFile2)
 
 const arrFile1=[];
 const arrFile2=[];
