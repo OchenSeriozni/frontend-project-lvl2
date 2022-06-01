@@ -1,12 +1,12 @@
 {
   "dependencies": {
-    "commander": "^9.2.0"
+    "commander": "^9.2.0",
+    "lodash": "^4.17.21"
   },
   "name": "@hexlet/code",
   "description": "[![Actions Status](https://github.com/OchenSeriozni/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/OchenSeriozni/frontend-project-lvl2/actions)",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/OchenSeriozni/frontend-project-lvl2/issues"
   },
-  "homepage": "https://github.com/OchenSeriozni/frontend-project-lvl2#readme"
+  "homepage": "https://github.com/OchenSeriozni/frontend-project-lvl2#readme",
+  "devDependencies": {
+    "eslint": "^8.16.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
+  }
 }
