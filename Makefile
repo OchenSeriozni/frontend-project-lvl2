@@ -1,5 +1,5 @@
 test:
-	console.log('Успех')
+	npm test
 lint: 
 	npx eslint .
 	

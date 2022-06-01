@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { Command } from 'commander';
-import genDiff from './index.mjs'
+const {Command} = require('commander');
+const genDiff = require ('./index.js')
 const program = new Command();
 
 program
@@ -17,4 +17,4 @@ program
  }
 
 
- export default start;
+ module.exports = start;

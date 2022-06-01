@@ -1,8 +1,8 @@
-import _ from 'lodash';
-import fs from 'node:fs'
+const _ = require('lodash');
+const  fs = require( 'node:fs');
 
 
-export default function gendiff(pathFile1,pathFile2){
+function gendiff(pathFile1,pathFile2){
 
 const newPathFile1 = fs.readFileSync(pathFile1)
 const newPathFile2 = fs.readFileSync(pathFile2)
@@ -33,7 +33,9 @@ const result= rest.map((item)=>{
   }
   return `+ ${item}`
 })
-return console.log(result.join('\n'));
+return result.join('\n');
+
 }
 
+module.exports= gendiff;
 

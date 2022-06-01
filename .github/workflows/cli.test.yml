@@ -1,4 +1,4 @@
-name: linter-status
+name: performance test
 on:
   - push
 jobs:
@@ -12,6 +12,7 @@ jobs:
       - name: npm install
         run: 
           npm ci
-      - name: Run linter
+      - name: Run cli.test
         run: |
           make lint
+          make test
